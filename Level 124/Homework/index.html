@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <title>ToDo Task Manager</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>📋 ToDo Tasks</h1>
+
+  <div class="controls">
+    <input type="number" id="limitInput" placeholder="რამდენი ტასკი?" min="1" max="200">
+    <button onclick="loadLimitedTasks()">⏳ მიიღე ტასკები</button>
+
+    <button onclick="filterCompleted()">✅ დასრულებული</button>
+    <button onclick="filterUncompleted()">🕓 დაუმთავრებელი</button>
+
+    <input type="number" id="idInput" placeholder="ID-ის მიხედვით" min="1" max="200">
+    <button onclick="loadTaskById()">🔍 მოძებნე ID</button>
+  </div>
+
+  <ul id="taskList"></ul>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #b2d3c2; /* Teal background */
+    margin: 0;
+}
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    width: 350px;
+}
+.card-header {
+    background-color: #4c9a92; /* Patterned teal */
+    padding: 20px;
+    position: relative;
+}
+.profile-pic {
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+.card-body {
+    padding: 20px;
+}
+.name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+.location {
+    color: gray;
+    font-size: 0.9em;
+}
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px;
+    border-top: 1px solid #ddd;
+}
+.stat {
+    text-align: center;
+}
+.stat h3 {
+    margin: 0;
+    font-size: 1.3em;
+}
+.stat p {
+    margin: 5px 0 0;
+    font-size: 0.8em;
+    color: gray;
+}

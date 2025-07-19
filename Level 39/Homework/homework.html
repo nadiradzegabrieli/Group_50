@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0d1a26;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: #14253d;
+            border-radius: 15px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #fff;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .card-content p {
+            margin: 10px 0;
+            color: #8daec9;
+        }
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-top: 1px solid #1f3a56;
+        }
+        .price {
+            display: flex;
+            align-items: center;
+        }
+        .price img {
+            width: 16px;
+            height: 16px;
+            margin-right: 5px;
+        }
+        .creator {
+            display: flex;
+            align-items: center;
+        }
+        .creator img {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://via.placeholder.com/300x200" alt="Equilibrium #3429">
+        <div class="card-content">
+            <h2>Equilibrium #3429</h2>
+            <p>Our Equilibrium collection promotes balance and calm.</p>
+        </div>
+        <div class="card-footer">
+            <div class="price">
+                <img src="https://via.placeholder.com/16" alt="ETH Icon">
+                <span>0.041 ETH</span>
+            </div>
+            <div class="time-left">
+                <span>3 days left</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <div class="creator">
+                <img src="https://via.placeholder.com/24" alt="Creator Avatar">
+                <span>Creation of Jules Wyvern</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

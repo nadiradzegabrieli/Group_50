@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>ზღვის გოჭები</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <h2>ფილტრი</h2>
+
+      <label>
+        <input type="checkbox" name="gender" value="male" /> მამრი
+      </label>
+      <label>
+        <input type="checkbox" name="gender" value="female" /> მდედრი
+      </label>
+
+      <label>
+        <input type="checkbox" name="color" value="white" /> თეთრი
+      </label>
+      <label>
+        <input type="checkbox" name="color" value="brown" /> ყავისფერი
+      </label>
+      <label>
+        <input type="checkbox" name="color" value="black" /> შავი
+      </label>
+
+      <label>
+        <input type="range" min="0" max="100" value="100" id="priceRange" />
+        მაქს ფასი: <span id="priceValue">100</span> ₾
+      </label>
+    </aside>
+
+    <main>
+      <h1>ზღვის გოჭები</h1>
+      <div id="guineaPigContainer" class="grid"></div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

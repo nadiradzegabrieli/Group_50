@@ -1,0 +1,85 @@
+:root {
+    --color1: #ff6347;
+    --color2: #4682b4;
+    --color3: #32cd32;
+    --bg-color1: #ffe4e1;
+    --bg-color2: #add8e6;
+    --bg-color3: #90ee90;
+    --font-size1: 20px;
+    --font-size2: 24px;
+    --font-size3: 28px;
+    --letter-spacing1: 1px;
+    --letter-spacing2: 2px;
+    --letter-spacing3: 3px;
+    --padding1: 10px;
+    --padding2: 15px;
+    --padding3: 20px;
+    --margin1: 10px;
+    --margin2: 15px;
+    --margin3: 20px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: #f0f0f0;
+}
+
+.element1 {
+    color: var(--color1);
+    background-color: var(--bg-color1);
+    font-size: var(--font-size1);
+    letter-spacing: var(--letter-spacing1);
+    padding: var(--padding1);
+    margin: var(--margin1);
+    display: block;
+    position: relative;
+    transition: transform 0.5s;
+}
+
+.element2 {
+    color: var(--color2);
+    background-color: var(--bg-color2);
+    font-size: var(--font-size2);
+    letter-spacing: var(--letter-spacing2);
+    padding: var(--padding2);
+    margin: var(--margin2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    transition: background-color 0.5s;
+}
+
+.element3 {
+    color: var(--color3);
+    background-color: var(--bg-color3);
+    font-size: var(--font-size3);
+    letter-spacing: var(--letter-spacing3);
+    padding: var(--padding3);
+    margin: var(--margin3);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transform: rotate(15deg);
+    transition: background-color 0.5s;
+}
+
+.element1:hover {
+    transform: scale(1.2);
+}
+
+.element2:hover {
+    background-color: var(--color2);
+}
+
+.element3:hover {
+    background-color: var(--color3);
+}

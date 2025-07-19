@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Travel Buddy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Travel Buddy 🌍</h1>
+    <p>Your companion for planning the perfect trip</p>
+    <button id="toggle-theme">Toggle Theme</button>
+  </header>
+
+  <section id="destination-section">
+    <h2>Choose Your Destination</h2>
+    <select id="country-select">
+      <option value="">-- Select a country --</option>
+      <option value="georgia">Georgia</option>
+      <option value="japan">Japan</option>
+      <option value="france">France</option>
+    </select>
+    <div id="country-info"></div>
+  </section>
+
+  <section id="weather-section">
+    <h2>Check the Weather</h2>
+    <input type="text" id="city" placeholder="Enter city name">
+    <button id="check-weather">Check</button>
+    <div id="weather-result"></div>
+  </section>
+
+  <footer>
+    <p>© 2025 Travel Buddy. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

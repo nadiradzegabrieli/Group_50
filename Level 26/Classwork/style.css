@@ -1,0 +1,30 @@
+heading1 {
+    color: bisque;
+    text-align: center;
+    text-decoration: line-through;
+    text-transform: capitalize;
+    text-shadow: 10px,20px,30px,red;
+}
+
+heading2{
+color: aquamarine;  
+text-decoration: overline;  
+ text-transform: lowercase; 
+text-shadow: 10px,20px,30px,red; 
+}
+
+/* heading1
+color - აძლევს ფერს h1-ს
+text-align - გაცენტრავს ჩვენს h1-ს
+text-decoration - ამ შემთხვევაში h1 - ში ჩაწერილ ტქსტს გადაესმევა ხაზი ( თითქოს წაშლილია ) 
+text-transform - ეს ატრიბუტი ტექსტის ყველა სიტყვას დიდი ასოთი დაიწყებს*/
+
+
+/* heading2 
+color - აძლევს ფერს h1 - ს
+text-decoration -  სიტყვას ზემოდან გაუკეთებს ხაზს
+text-transform - ამ შემთხვევაში ყველა სიტყვა დაიწერება პატარა ასოებით
+text-shadow - 10 px - პოზიციას შეუცვლის x ღერძზე
+              20 px - პოზიციას უცვლის y ღერძზე
+              30 px - ტექსტს დაბინდავს (blur) დაბლარავს
+              red -  ჩრდილს ანიჭებს ფერს

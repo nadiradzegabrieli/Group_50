@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Მომხმარებელი</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>რეგისტრაცია</h1>
+  <form id="registerForm">
+    <input type="text" id="regFullname" placeholder="სრული სახელი" required>
+    <input type="email" id="regEmail" placeholder="ემაილი" required>
+    <input type="password" id="regPassword" placeholder="პაროლი" required>
+    <button type="submit">რეგისტრაცია</button>
+  </form>
+
+  <h1>ავტორიზაცია</h1>
+  <form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="ემაილი" required>
+    <input type="password" id="loginPassword" placeholder="პაროლი" required>
+    <button type="submit">ავტორიზაცია</button>
+  </form>
+
+  <div id="userData"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

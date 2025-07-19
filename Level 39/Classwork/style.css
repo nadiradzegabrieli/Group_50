@@ -1,0 +1,16 @@
+
+.transform-div {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    margin: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: darkblue;
+}
+
+/* scale, rotate, skew, და translate ფუნქციების გამოყენება */
+.transform-div:hover {
+    transform: scale(1.5) rotate(45deg) skew(20deg) translate(50px, 50px);
+}
+

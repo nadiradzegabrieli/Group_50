@@ -1,0 +1,62 @@
+body {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar sect2 sect1"
+        "sidebar sect3 navigation"
+        "sidebar sect4 navigation"
+        "sidebar sect5 navigation";
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows:  1fr 1fr 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    margin: 0;
+}
+header {
+    grid-area: header;
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+}
+.navigation {
+    grid-area: navigation;
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+}
+.sect1 {
+    grid-area: sect1;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+}
+.sect2 {
+    grid-area: sect2;
+    background-color: orange;
+    text-align: center;
+    padding: 10px;
+}
+.sect3 {
+    grid-area: sect3;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+}
+.sect4 {
+    grid-area: sect4;
+    background-color: red;
+    text-align: center;
+    padding: 10px;
+}
+.sect5 {
+    grid-area: sect5;
+    background-color: orange;
+    text-align: center;
+    padding: 10px;
+}

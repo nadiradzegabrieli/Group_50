@@ -1,0 +1,7 @@
+.lorem-text {
+    font-family: Arial, sans-serif; /* 1. Font Family */
+    font-size: 16px; /* 2. Font Size */
+    line-height: 1.5; /* 3. Line Height */
+    color: #333; /* 4. Text Color */
+    text-align: justify; /* 5. Text Alignment */
+}

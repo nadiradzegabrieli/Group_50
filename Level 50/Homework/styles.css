@@ -1,0 +1,78 @@
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form container styles */
+.sign-in-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+/* Input and button styles */
+.sign-in-form input {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sign-in-form button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #6a11cb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-in-form button:hover {
+    background-color: #2575fc;
+}
+
+/* Alternative login section */
+.alternative-login p {
+    margin: 10px 0;
+}
+
+.alternative-login button {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.alternative-login button:hover {
+    background-color: #333;
+}
+
+/* Sign-up link */
+.sign-in-form .sign-up {
+    display: block;
+    margin-top: 10px;
+    color: #2575fc;
+    text-decoration: none;
+}
+
+.sign-in-form .sign-up:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>მანქანები</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>ჩვენი მანქანები 🚗</h1>
+  <ul id="car-list">
+    <li onclick="showCar('bmw')">BMW</li>
+    <li onclick="showCar('mercedes')">Mercedes</li>
+    <li onclick="showCar('audi')">Audi</li>
+  </ul>
+
+  <div id="car-info" class="hidden">
+    <img id="car-image" src="" alt="Car image">
+    <p id="car-details"></p>
+    <button onclick="playSound()">🔊 Engine Sound</button>
+    <button onclick="showInfo()">ℹ️ Get Info</button>
+    <audio id="car-audio" src=""></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+.DiV1 {
+    width: 275px;
+    height: 275px;
+    border: 25 px dotted black;
+    border-radius:50% ;
+    background-color: blueviolet;
+    margin: 0 200px 0 50px;
+}
+
+
+.DiV2 {
+    width: 275px;
+    height: 2750px;
+    border: 25 px dotted black;
+    border-radius:50% ;
+    background-color: aqua;
+    margin: 0 350px 0 50px;
+}
+
+
+
+
+
+
+
+
+
+
+/* შექმენი 2 div ელემენტი, მიანიჭეთ 5 თვისება, width, height, border, border-radius, backgrond-color, შემდეგ ორივე ელემენტს შორის შექმენით დაშორება, პირველი ელემენტი უნდა დაშორდეს მაღლა ნაწილს 200px  - ით, მარცხენა გვერდიდან კი 300px - ით, ხოლო ქვედა გვერდიდან 50px - ით. იგივე თვისებები გამოიყენეთ მეორე div ელემენტზე, დაშორების მნიშვნელობები უნდა იყვეს განსხვავებული. */

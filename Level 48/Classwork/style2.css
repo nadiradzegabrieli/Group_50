@@ -1,0 +1,70 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+main{
+    grid-area: content;
+    background-color: lightskyblue;
+    text-align: center;
+    padding: 20px;
+
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "aside sect1 sect2 sect3"
+        "aside content content content"
+        "footer footer footer";
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: auto 200px 400px auto;
+    height: 100vh;
+    gap: 5px;
+}
+
+header {
+    grid-area: header;
+    background-color: lightblue;
+    text-align: center;
+    padding: 20px;
+}
+
+aside {
+    grid-area: aside;
+    background-color: royalblue;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+section {
+    grid-area: sect1;
+    background-color: lightsteelblue;
+    text-align: center;
+    padding: 20px;
+    grid-area: sect2;
+    background-color: steelblue;
+    text-align: center;
+    padding: 20px;
+    grid-area: sect3;
+    background-color: cornflowerblue;
+    text-align: center;
+    padding: 20px;
+}
+
+
+
+
+
+footer {
+    grid-area: footer;
+    background-color: darkblue;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}

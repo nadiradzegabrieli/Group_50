@@ -1,0 +1,25 @@
+/* Prefix-ები border radius - სთვის */
+element {
+    -webkit-border-radius: 10px; /* Safari, old Chrome */
+    -moz-border-radius: 10px; /* Firefox */
+    border-radius: 10px; /* Standard */
+  }
+  
+
+  /* Prefix-ები  box-shadow - სთვის */
+element {
+    -webkit-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Safari, older Chrome */
+    -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Firefox */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Standard */
+  }
+  
+
+
+  /* Prefix-ები  flexbox - სთვის */
+.container {
+    -webkit-display: flex; /* Safari, older Chrome */
+    -ms-display: flex; /* Internet Explorer 10 */
+    display: flex; /* Standard */
+  }
+  
+

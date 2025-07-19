@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitBit 19 – Smart Watch</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>FitBit 19</h1>
+    <p>ყველაზე ჭკვიანი საათი</p>
+  </header>
+  <section class="product">
+    <img id="watchImage" src="black.png" alt="FitBit Watch" />
+    
+    <div class="details">
+      <h2>პროდუქტის მახასიათებლები</h2>
+      <ul>
+        <li>🫀 გულისცემის მონიტორინგი</li>
+        <li>⏱️ ციფრული საათი</li>
+        <li>📱 სმარტფონთან დაკავშირება</li>
+      </ul>
+
+      <label>აირჩიეთ ფერი:</label><br>
+      <button onclick="changeColor('black')">შავი</button>
+      <button onclick="changeColor('blue')">ლურჯი</button>
+      <button onclick="changeColor('pink')">ვარდისფერი</button>
+
+      <div class="simulator">
+        <p>⏰ დრო: <span id="clock">00:00:00</span></p>
+        <p>❤️ გულისცემა: <span id="heart">-- bpm</span></p>
+      </div>
+
+      <button class="buy">BUY NOW</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

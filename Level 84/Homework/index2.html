@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Aura Garden</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+      cursor: crosshair;
+    }
+
+    .flower {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background: radial-gradient(circle, #ff9a9e, #fad0c4);
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.4s ease, background 1s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    const colors = [
+      "radial-gradient(circle, #fbc2eb, #a6c1ee)",
+      "radial-gradient(circle, #ffecd2, #fcb69f)",
+      "radial-gradient(circle, #a1ffce, #faffd1)",
+      "radial-gradient(circle, #d4fc79, #96e6a1)",
+      "radial-gradient(circle, #ff9a9e, #fad0c4)"
+    ];
+
+    function createFlower(x, y) {
+      const flower = document.createElement('div');
+      flower.classList.add('flower');
+      flower.style.left = x - 20 + 'px';
+      flower.style.top = y - 20 + 'px';
+      flower.style.background = colors[Math.floor(Math.random() * colors.length)];
+      document.body.appendChild(flower);
+
+      // ანიმაცია
+      setTimeout(() => {
+        flower.style.transform = "scale(1.5) rotate(360deg)";
+      }, 50);
+
+      // გაქრობა
+      setTimeout(() => {
+        flower.remove();
+      }, 3000);
+    }
+
+    document.addEventListener("mousemove", (e) => {
+      createFlower(e.clientX, e.clientY);
+    });
+  </script>
+
+</body>
+</html>

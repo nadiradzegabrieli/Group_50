@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>To-Do სიები</title>
+</head>
+<body>
+  <h1>დავალებების სია</h1>
+
+  <label>
+    Completed:
+    <select id="completedFilter">
+      <option value="all">ყველა</option>
+      <option value="true">მზად</option>
+      <option value="false">დარჩენილი</option>
+    </select>
+  </label>
+
+  <label>
+    ჩანაწერები ერთ გვერდზე:
+    <select id="limitSelect">
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="15">15</option>
+    </select>
+  </label>
+
+  <ul id="todoList"></ul>
+
+  <div id="pagination"></div>
+
+  <script src="todo.js"></script>
+</body>
+</html>

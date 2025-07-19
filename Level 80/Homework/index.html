@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Interactive Web Assignment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    h1, h2 {
+      text-align: center;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      width: 300px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: 0.3s;
+      cursor: pointer;
+    }
+
+    form {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    form input, form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 1rem 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    form button {
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💻 Combined Web Assignment</h1>
+
+  <!-- Event Listener Explanation -->
+  <section class="section">
+    <h2>1️⃣ EventListener Example</h2>
+    <button id="demoBtn">Click me!</button>
+    <p>// EventListener waits for an action — e.g., click — and calls a function.</p>
+  </section>
+
+
+  <section class="section">
+    <h2>2️⃣ Hover & Click on Photos</h2>
+    <div class="image-row">
+      <img id="photo1" src="image1.jpg" alt="Photo 1">
+      <img id="photo2" src="image2.jpg" alt="Photo 2">
+      <img id="photo3" src="image3.jpg" alt="Photo 3">
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>3️⃣ Advanced Image Interaction</h2>
+    <div class="image-row">
+      <img id="cycleImage" src="photoA.jpg" alt="Cycle Image">
+    </div>
+  </section>
+
+
+  <section class="section">
+    <h2>4️⃣ Registration Form</h2>
+    <form id="register-form">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <input type="password" id="repeat-password" placeholder="Repeat Password">
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <script>
+
+    document.getElementById("demoBtn").addEventListener("click", function(event) {
+      alert("You clicked the demo button!");
+      console.log("Event object:", event);
+    });
+
+
+    const photo1 = document.getElementById("photo1");
+    const photo2 = document.getElementById("photo2");
+    const photo3 = document.getElementById("photo3");
+
+    photo1.addEventListener("mouseover", () => photo1.src = "image1-hover.jpg");
+    photo1.addEventListener("mouseout", () => photo1.src = "image1.jpg");
+
+    photo2.addEventListener("mouseover", () => photo2.src = "image2-hover.jpg");
+    photo2.addEventListener("mouseout", () => photo2.src = "image2.jpg");
+
+    photo3.addEventListener("click", () => photo3.src = "image3-click.jpg");
+    photo3.addEventListener("mouseout", () => photo3.src = "image3.jpg");
+
+
+    const cycleImage = document.getElementById("cycleImage");
+    let cycleState = 0;
+
+    cycleImage.addEventListener("click", () => {
+      if (cycleState === 0) {
+        cycleImage.src = "photoB.jpg";
+        cycleState = 1;
+      } else if (cycleState === 2) {
+        cycleImage.src = "photoA.jpg";
+        cycleState = 0;
+      }
+    });
+
+    cycleImage.addEventListener("mouseover", () => {
+      if (cycleState === 1) {
+        cycleImage.src = "photoC.jpg";
+        cycleState = 2;
+      }
+    });
+
+    document.getElementById("register-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const pass1 = document.getElementById("password").value.trim();
+      const pass2 = document.getElementById("repeat-password").value.trim();
+
+      if (pass1 === "" || pass2 === "") {
+        alert("Input fields cannot be empty.");
+      } else if (pass1 !== pass2) {
+        alert("Passwords do not match eachother. Try again.");
+      } else {
+        alert("Your login was successful");
+      }
+    });
+  </script>
+</body>
+</html>

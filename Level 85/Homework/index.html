@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>Drum Kit with Premium Sound</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .drum-button {
+      padding: 20px 30px;
+      margin: 10px;
+      font-size: 18px;
+      background-color: #ff8a65;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+      color: white;
+    }
+
+    .drum-button:hover {
+      transform: scale(1.1);
+      background-color: #ff7043;
+    }
+
+    #premiumUsed {
+      margin-top: 20px;
+      color: #444;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Drum Kit + Premium Sound</h1>
+
+  <button class="drum-button" onclick="playDrum('kick')">Kick</button>
+  <button class="drum-button" onclick="playDrum('snare')">Snare</button>
+  <button class="drum-button" onclick="playDrum('hihat')">Hi-Hat</button>
+  <button class="drum-button" onclick="playPremium()">🎵 Premium Sound</button>
+  
+  <div id="premiumUsed"></div>
+
+  <script>
+    const sounds = {
+      kick: "sounds/kick.wav",
+      snare: "sounds/snare.wav",
+      hihat: "sounds/hihat.wav",
+      premium: "sounds/premium.mp3" // შენი უნიკალური premium ხმა
+    };
+
+    let premiumPlayed = false;
+
+    function playDrum(type) {
+      const audio = new Audio(sounds[type]);
+      audio.play();
+    }
+
+    function playPremium() {
+      if (!premiumPlayed) {
+        const audio = new Audio(sounds.premium);
+        audio.play();
+        premiumPlayed = true;
+        document.getElementById("premiumUsed").innerText = "✅ Premium ხმაური უკვე გაჟღერდა!";
+      } else {
+        document.getElementById("premiumUsed").innerText = "⚠️ Premium ხმაური ხელმისაწვდომია მხოლოდ ერთხელ.";
+      }
+    }
+  </script>
+</body>
+</html>

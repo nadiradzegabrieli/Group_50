@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <title>Order Manager</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f3f3f3;
+    }
+    h2 {
+      margin-top: 30px;
+    }
+    input, button {
+      padding: 8px;
+      margin: 5px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li {
+      background: #fff;
+      margin: 4px 0;
+      padding: 6px 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 2px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <h1>🍽 Order Manager</h1>
+  <div>
+    <input type="text" id="nameInput" placeholder="მომხმარებლის სახელი" />
+    <input type="text" id="foodInput" placeholder="საჭმელი" />
+    <button id="orderBtn">დამატება</button>
+  </div>
+
+  <h2>🕓 აქტიური შეკვეთები</h2>
+  <ul id="activeOrders"></ul>
+
+  <h2>✔️ დასრულებული მომხმარებლები</h2>
+  <ul id="completedOrders"></ul>
+
+  <script>
+    class OrderManager {
+      constructor() {
+        this.activeOrders = new Map();
+        this.completedOrders = new Set();
+        this.orderId = 1;
+      }
+
+      processOrder(customerName, foodName, callback) {
+        const orderText = `${customerName}, ${foodName}`;
+        this.activeOrders.set(this.orderId, orderText);
+        this.render();
+
+        const currentId = this.orderId;
+        this.orderId++;
+
+        setTimeout(() => {
+          this.activeOrders.delete(currentId);
+          this.completedOrders.add(customerName);
+          callback(currentId);
+          this.render();
+        }, 3000);
+      }
+
+      render() {
+        const activeList = document.querySelector("#activeOrders");
+        const completedList = document.querySelector("#completedOrders");
+
+        activeList.innerHTML = "";
+        completedList.innerHTML = "";
+
+        for (const [id, order] of this.activeOrders) {
+          const li = document.createElement("li");
+          li.textContent = `${id}. ${order}`;
+          activeList.appendChild(li);
+        }
+
+        let idx = 1;
+        for (const name of this.completedOrders) {
+          const li = document.createElement("li");
+          li.textContent = `${idx++}. ${name}`;
+          completedList.appendChild(li);
+        }
+      }
+    }
+
+    function callBack(orderId) {
+      console.log(`🎉 შეკვეთა #${orderId} შესრულდა`);
+    }
+
+    const manager = new OrderManager();
+    document.querySelector("#orderBtn").addEventListener("click", () => {
+      const name = document.querySelector("#nameInput").value.trim();
+      const food = document.querySelector("#foodInput").value.trim();
+
+      if (name && food) {
+        manager.processOrder(name, food, callBack);
+        document.querySelector("#nameInput").value = "";
+        document.querySelector("#foodInput").value = "";
+      }
+    });
+  </script>
+</body>
+</html>

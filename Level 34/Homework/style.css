@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 20px;
+}
+
+.table-container {
+    margin-bottom: 30px;
+}
+
+/* Dark Table */
+.dark-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #1a1a2e;
+    color: white;
+}
+
+.dark-table th, .dark-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+.dark-table .highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Green Table */
+.green-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2ecc71;
+    color: white;
+}
+
+.green-table th, .green-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #27ae60;
+}
+
+/* Purple Table */
+.purple-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #9b59b6;
+    color: white;
+}
+
+.purple-table th, .purple-table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #8e44ad;
+}

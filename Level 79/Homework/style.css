@@ -1,0 +1,70 @@
+/* ძირითადი სტილები */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+header {
+  background-color: #48a9e6;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+section {
+  margin: 2rem auto;
+  max-width: 600px;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+select, input, button {
+  display: block;
+  width: 100%;
+  margin: 1rem 0;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#toggle-theme {
+  margin-top: 1rem;
+  background-color: #ffffff;
+  color: #48a9e6;
+  border: 2px solid white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #48a9e6;
+  color: white;
+}
+
+/* Dark თემა */
+.dark-mode {
+  background-color: #1c1c1c;
+  color: #eee;
+}
+
+.dark-mode section {
+  background-color: #2a2a2a;
+}
+
+.dark-mode input, .dark-mode select, .dark-mode button {
+  background-color: #444;
+  color: #eee;
+  border-color: #666;
+}

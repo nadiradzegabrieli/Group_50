@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8">
+  <title>მოძრავი ელემენტი</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(120deg, #e0f7fa, #fff3e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #box {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle at top left, #ff8a65, #ff5722);
+      border-radius: 16px;
+      transition: top 0.1s ease, left 0.1s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <div id="box"></div>
+
+  <script>
+    const box = document.getElementById("box");
+    let topPos = 200, leftPos = 200;
+    box.style.top = topPos + "px";
+    box.style.left = leftPos + "px";
+
+    document.addEventListener("keydown", function(event) {
+      const step = 20;
+
+      switch(event.key) {
+        case "ArrowUp":
+          topPos -= step;
+          break;
+        case "ArrowDown":
+          topPos += step;
+          break;
+        case "ArrowLeft":
+          leftPos -= step;
+          break;
+        case "ArrowRight":
+          leftPos += step;
+          break;
+      }
+
+      box.style.top = topPos + "px";
+      box.style.left = leftPos + "px";
+    });
+  </script>
+</body>
+</html>
