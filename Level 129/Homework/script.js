@@ -2,7 +2,6 @@ document.getElementById("getWeatherBtn").addEventListener("click", () => {
   const city = document.getElementById("cityInput").value.trim();
   if (!city) return alert("Please enter a city name");
 
-  // Step 1: Get coordinates using Open-Meteo geocoding
   fetch(`https://geocoding-api.open-meteo.com/v1/search?name=${city}`)
     .then(res => res.json())
     .then(data => {
